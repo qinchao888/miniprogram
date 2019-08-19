@@ -1,0 +1,15 @@
+<view class="loadmore-container">
+  <view class="loading loadmore-common" wx:if="{{isLoading}}">
+    <view class="loading-img"></view>
+    <view class="loading-text">{{loadingText}}</view>
+  </view>
+  <view class="underline" wx:if="{{noMoreData&&length>limit}}">
+    <view class="line loadmore-common">我是有底线的</view>
+  </view>
+  <view class="nodata-wrap" style="height:{{nodataH}}px" wx:if="{{hasQuery&&length==0}}">
+    <view class="nodata">
+      <image style="width:{{imgWidth}}rpx;height:{{imgHeight}}rpx;" class="nodata-img" src="{{nodataImg}}"/>
+      <view>{{nodataText}}</view>
+    </view>
+  </view>
+</view>

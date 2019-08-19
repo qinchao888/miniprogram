@@ -1,0 +1,6 @@
+<view class="container">
+  <view class="content-area">
+    <view class="content" wx:for="{{list}}" wx:key="{{index}}">{{item.name}}</view>
+  </view>
+  <load-more loading-text="正在加载..." is-loading="{{isLoading}}" has-query="{{hasQuery}}" length="{{list.length}}" no-more-data="{{noMoreData}}" nodata-img="http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/noAddress-26d570cefa.png" imgWidth="{{372}}" imgHeight="{{372}}" limit="{{10}}"></load-more>
+</view>
